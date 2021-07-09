@@ -10,7 +10,7 @@ type User struct {
 }
 
 func main() {
-	t, err := template.ParseFiles("exp/hello.gohtml")
+	t, err := template.ParseFiles("hello.gohtml")
 	if err != nil {
 		panic(err)
 	}
@@ -23,7 +23,7 @@ func main() {
 		panic(err)
 	}
 
-	data.Name = "Bob"
+	data.Name = "<script>alert('hi')</script>"
 	err = t.Execute(os.Stdout, data)
 	if err != nil {
 		panic(err)
