@@ -20,14 +20,7 @@ func main() {
 	}
 
 	data := User{
-		Name:  "John",
-		Int:   123,
-		Float: 3.14,
-		Slice: []string{"a", "b", "c"},
-		Map: map[string]string{
-			"key1": "value1",
-			"key2": "value2",
-		},
+		Name: "John",
 	}
 
 	err = t.Execute(os.Stdout, data)
